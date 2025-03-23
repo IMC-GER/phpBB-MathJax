@@ -4,6 +4,7 @@
  * An extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2025, Thorsten Ahlers
+ * @copyright (c) 2018, kinerity, https://www.layer-3.org
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -16,13 +17,13 @@ class v_1_0_0_add_bbcode extends \phpbb\db\migration\migration
 
 	protected $bbcode_data = [
 			'LaTeXinline' => [
-				'bbcode_helpline'	 => 'Shows the LaTeX formula inline',
+				'bbcode_helpline'	 => 'Shows the LaTeX formula inline.',
 				'bbcode_match'		 => '[latex_inline #ignoreTags=true]{TEXT}[/latex_inline]',
 				'bbcode_tpl'		 => '<span>\({TEXT}\)</span>',
 				'display_on_posting' => 1,
 			],
 			'LaTeX' => [
-				'bbcode_helpline'	 => 'Insert the LaTeX formula as a paragraph',
+				'bbcode_helpline'	 => 'Inserting the LaTeX formula in a separate paragraph.',
 				'bbcode_match'		 => '[latex #ignoreTags=true]{TEXT}[/latex]',
 				'bbcode_tpl'		 => '<span>\[{TEXT}\]</span>',
 				'display_on_posting' => 1,
