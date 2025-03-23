@@ -6,7 +6,8 @@
  * Adapted original code from:
  * Advanced BBCode Box v3.3.8
  *
- * @copyright (c) 2016 Matt Friedman
+ * @copyright (c) 2025, Thorsten Ahlers
+ * @copyright (c) 2016, Matt Friedman
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -33,9 +34,6 @@ class bbcodes_installer
 	 * Constructor
 	 *
 	 * @param driver_interface $db
-	 * @param helper           $group_helper
-	 * @param language         $language
-	 * @param request          $request
 	 * @param string           $phpbb_root_path
 	 * @param string           $php_ext
 	 * @access public
@@ -156,6 +154,7 @@ class bbcodes_installer
 				FROM ' . BBCODES_TABLE . "
 				WHERE LOWER(bbcode_tag) = '" . $this->db->sql_escape(strtolower($bbcode_name)) . "'
 				   OR LOWER(bbcode_tag) = '" . $this->db->sql_escape(strtolower($bbcode_tag)) . "'";
+
 		$result = $this->db->sql_query($sql);
 		$bbcode_id = $this->db->sql_fetchfield('bbcode_id');
 		$this->db->sql_freeresult($result);
@@ -175,6 +174,7 @@ class bbcodes_installer
 		$sql = 'UPDATE ' . BBCODES_TABLE . '
 				SET ' . $this->db->sql_build_array('UPDATE', $bbcode_data) . '
 				WHERE bbcode_id = ' . (int) $bbcode_id;
+
 		$this->db->sql_query($sql);
 	}
 
@@ -191,6 +191,7 @@ class bbcodes_installer
 		if ($bbcode_id <= BBCODE_LIMIT)
 		{
 			$bbcode_data['bbcode_id'] = (int) $bbcode_id;
+
 			// set display_on_posting to 1 by default, so if 0 is desired, set it in our data array
 			$bbcode_data['display_on_posting'] = (int) array_key_exists('display_on_posting', $bbcode_data) ? $bbcode_data['display_on_posting'] : 1;
 
@@ -236,7 +237,8 @@ class bbcodes_installer
 	protected function get_max_column_value($column)
 	{
 		$sql = 'SELECT MAX(' . $this->db->sql_escape($column) . ') AS maximum
-			FROM ' . BBCODES_TABLE;
+				FROM ' . BBCODES_TABLE;
+
 		$result = $this->db->sql_query($sql);
 		$maximum = $this->db->sql_fetchfield('maximum');
 		$this->db->sql_freeresult($result);
