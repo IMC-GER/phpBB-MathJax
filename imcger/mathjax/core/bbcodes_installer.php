@@ -24,6 +24,9 @@ class bbcodes_installer
 	/** @var \acp_bbcodes */
 	protected $acp_bbcodes;
 
+	/** @var driver_interface */
+	protected $db;
+
 	/** @var string */
 	protected $phpbb_root_path;
 
