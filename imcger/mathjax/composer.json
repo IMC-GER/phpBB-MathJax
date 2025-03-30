@@ -4,8 +4,8 @@
     "description": "This extension makes it possible to write formulas in LaTeX notation through the integration of MathJax.",
     "keywords": ["math", "MathJax", "LaTeX", "phpBB"],
     "homepage": "",
-    "version": "1.1.1",
-    "time": "2025-03-28",
+    "version": "1.2.0",
+    "time": "2025-03-30",
     "license": "GPL-2.0-only",
     "authors": [
 		{
