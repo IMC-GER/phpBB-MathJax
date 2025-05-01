@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "This extension makes it possible to write formulas in LaTeX notation through the integration of MathJax.",
     "keywords": ["math", "MathJax", "LaTeX", "phpBB"],
-    "version": "1.2.0",
-    "time": "2025-04-19",
+    "version": "1.2.1",
+    "time": "2025-05-01",
     "license": "GPL-2.0-only",
     "authors": [
 		{
