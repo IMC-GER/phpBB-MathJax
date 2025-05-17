@@ -21,5 +21,5 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, [
 	'KMJ_LATEX'			  => 'Fügt die Formel in eine Textzeile ein: [latex]E = mc^2[/latex] ',
 	'KMJ_LATEX_INLINE'	  => 'Fügt die Formel in eine Textzeile ein: [latex_inline]E = mc^2[/latex_inline] ',
-	'KMJ_LATEX_PARAGRAPH' => 'Fügt die Formel zentriert in einen separaten Absatz ein:[latex_para]E = mc^2[/latex_para] ',
+	'KMJ_LATEX_PARAGRAPH' => 'Fügt die Formel zentriert in einen separaten Absatz ein: [latex_para]E = mc^2[/latex_para] ',
 ]);
